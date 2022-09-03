@@ -1,0 +1,16 @@
+<h1>Books</h1>
+
+<ul>
+    <!--Create a list of all props!-->
+    <% @books.each do |book| %>
+    <li>
+        <%= link_to book.title, book %>
+    </li>
+    <li>
+        <%= book.author %>
+    </li>
+    <img src=<%= book.cover_path %>>
+    <% end %>
+</ul>
+
+<%= link_to "Upload new book", new_book_path %>
