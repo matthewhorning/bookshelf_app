@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
 	def index
-    	@books = Book.all
+    	@books = Book.order('pubdate DESC') ##Sort by ASC or DESC
 	end
 
 	def show
